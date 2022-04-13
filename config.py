@@ -1,2 +1,4 @@
-BOT_TOKEN = 'token'
-admin_id = 1000000
+TOKEN = 'TOKEN'
+ADMIN_ID = [1000000, 100000]
+PRIVATE_CHAT_ID = -100000000
+DATABASE_PATH = 'database/users.db'
