@@ -2,6 +2,7 @@ from resources import messages as msgz, keyboards as kybrdz
 from bot import *
 
 from aiogram.types import InputFile
+from datetime import datetime
 
 
 async def admin_commands(msg: Message):
@@ -25,7 +26,11 @@ async def admin_commands(msg: Message):
 
     elif text.startswith('/get_database'):
 
-        file = InputFile('database/users.db', 'users.db')
+        now = str(datetime.now().strftime("%d%B"))
+
+        file_name = f"database{now}file.db"
+
+        file = InputFile(DATABASE_PATH, file_name)
 
         await bot.send_document(user_id, file)
 
